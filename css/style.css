@@ -1288,6 +1288,7 @@ textarea.input {
 }
 
 .contacts__form {
+  padding-top: 1.5625rem;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
@@ -1473,6 +1474,12 @@ textarea.form__input {
 
 .swiper-button-lock {
   display: none !important;
+}
+
+@media (min-width: 0em) {
+  .contacts__list {
+    padding-top: 3.125rem;
+  }
 }
 
 @media (min-width: 47.99875em) {
@@ -1931,6 +1938,12 @@ textarea.form__input {
   }
 }
 
+@media (max-width: 47.9375em) {
+  .contacts__list {
+    padding-top: 0.0000000625rem;
+  }
+}
+
 @media (max-width: 40.625em) {
   .portfolio__slider {
     margin-right: -0.9375rem;
@@ -2373,6 +2386,20 @@ textarea.form__input {
   .career__content {
     padding-top: 0.9375rem;
   }
+}
+
+@media (min-width: 47.9375em) and (max-width: 0em) {
+@supports (padding-top: clamp( 0.0000000625rem , 3.125rem  +  -6.5189046936vw , 3.125rem )) {
+    .contacts__list {
+      padding-top: clamp( 0.0000000625rem , 3.125rem  +  -6.5189046936vw , 3.125rem );
+    }
+}
+
+@supports not (padding-top: clamp( 0.0000000625rem , 3.125rem  +  -6.5189046936vw , 3.125rem )) {
+    .contacts__list {
+      padding-top: calc(0.0000000625rem + 3.1249999375 * (100vw - 47.9375rem) / -47.9375);
+    }
+}
 }
 
 @media (any-hover: hover) {
